@@ -1,0 +1,10 @@
+<div 
+    *ngIf="visible"
+    [ngClass]="[
+        'sidebar', 
+        'animate__animated', 
+        visible ? 'animate__fadeInLeft' : 'animate__fadeInRight', 
+        'animate__faster']"
+>
+    <button (click)="closeSideBar()">close sidebar</button>
+</div>

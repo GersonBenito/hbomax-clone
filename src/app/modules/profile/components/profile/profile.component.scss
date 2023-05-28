@@ -1,0 +1,63 @@
+.container-profiles{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+    justify-content: center;
+    margin: 40px 20px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:hover{
+        transform: scale(1.2);
+    }
+    .user-picture{
+        border-radius: 999px;
+        border: 6px solid rgb(255, 140, 230);
+        background: rgba(255, 255, 255, 0.1);
+        width: 136px;
+        height: 136px;
+        .user{
+            align-items: center;
+            color: rgb(255, 255, 255);
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 50px;
+            height: 134px;
+            justify-content: center;
+            letter-spacing: 0.5px;
+            line-height: 60px;
+            width: 134px;
+        }
+    }
+    .user-name{
+        color: rgb(255, 255, 255);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0px;
+        line-height: 21px;
+        margin-top: 12px;
+        width: 175px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container-profiles{
+        gap: 32px 0px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .container-profiles{
+        height: 470px;
+    }
+}

@@ -1,0 +1,12 @@
+.sidebar{
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
+    background-color: rgb(15, 15, 15);
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 290px;
+    transform: translateX(0px);
+    transition: transform 1s;
+    z-index: 1;
+}

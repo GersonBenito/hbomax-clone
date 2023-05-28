@@ -1,0 +1,55 @@
+@mixin certer(){
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.container{
+    height: 100vh;
+    background: linear-gradient(to left, #3c1053, #ad5389); 
+    display: grid;
+    grid-template-rows: 15% 5% auto 10%;
+}
+
+.logo-page{
+    @include certer();
+    img{
+        width: 134px;
+    }
+}
+
+.question{
+    @include certer();
+    h2{
+        color: rgb(255, 255, 255);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: 0px;
+        line-height: 32.4px;
+    }
+}
+
+.profiles{
+    @include certer();
+}
+
+.manage-profiles{
+    @include certer();
+    p{
+        color: rgb(255, 255, 255);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0px;
+        line-height: 32.4px;
+        margin-bottom: 0px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .profiles{
+        overflow-y: scroll;
+    }
+}

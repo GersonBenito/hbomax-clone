@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "Gerson Benito",
+            "email": "gersonbenito@gmail.com"
+        },
+        {
+            "id": 2,
+            "username": "Flor Mariela",
+            "email": "flormariela@gmail.com"
+        },
+        {
+            "id": 3,
+            "username": "Dougla",
+            "email": "dougla@gmail.com"
+        },
+        {
+            "id": 4,
+            "username": "David",
+            "email": "david@gmail.com"
+        }
+    ]
+}

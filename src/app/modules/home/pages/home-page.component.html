@@ -1,0 +1,19 @@
+<div class="container">
+    <div>
+        <app-sidebar 
+            (onShowSideBar)="closeSideBar($event)" 
+            [visible]="isVisibleSidebar" 
+        />
+    </div>
+    <header>
+        <app-navbar (onShowSideBar)="showSideBar($event)" />
+    </header>
+    <main>
+        <router-outlet />
+        <button routerLink="/profile/select" >go to profiles</button>
+    </main>
+    <footer>
+        <app-footer />
+    </footer>
+</div>
+

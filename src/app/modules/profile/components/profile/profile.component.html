@@ -1,0 +1,8 @@
+<div class="container-profiles">
+    <div class="profile" *ngFor="let user of users">
+        <div class="user-picture">
+            <div class="user">{{ user.username | firstLetter }}</div>
+        </div>
+        <div class="user-name">{{ user.username }}</div>
+    </div>
+</div>

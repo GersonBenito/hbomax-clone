@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$primario: linear-gradient(4.71239rad, rgb(252, 0, 196) 12%, rgb(255, 140, 230) 90%);
+$secundario: rgba(0, 0, 0, 0.8);
+$terciario: rgb(255, 255, 255);
+
+// $background: linear-gradient(313.21deg, #FC00C4 16.17%, #FF8CE6 87.96%),
+// $linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+
