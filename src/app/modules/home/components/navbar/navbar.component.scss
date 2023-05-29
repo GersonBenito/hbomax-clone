@@ -1,8 +1,81 @@
-.navbar{
+@mixin text-navbar($sise: 14px){
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: $sise;
+    line-height: 21px;
+    letter-spacing: 0px;
+}
+.container{
     background: rgba(15, 15, 15, 0.98);
-    position: absolute;
+    position: fixed;
     width: 100%;
     opacity: 0.98;
     height: 80px;
     z-index: 0;
+    display: flex;
+    align-items: center;
+    top: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0px 24px;
+    .options{
+        @include text-navbar();
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        .icon-menu{
+            display: flex;
+            align-items: center;
+            img{
+                width: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+    .logo-app{
+        img{
+            width: 120px;
+        }
+    }
+
+}
+
+.actions{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    .search{
+        display: flex;
+        img{
+            width: 28px;
+            cursor: pointer;
+        }
+    }
+    .user-profile{
+        color: rgb(255, 255, 255);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        .user-image{
+            border-radius: 999px;
+            border: 3px solid rgb(255, 140, 230);
+            background: rgba(255, 255, 255, 0.1);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include text-navbar(16px);
+            cursor: pointer;
+        }
+        .user-name{
+            @include text-navbar();
+            cursor: pointer;
+        }
+    }
 }

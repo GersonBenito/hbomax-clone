@@ -1,7 +1,11 @@
-main{
-    height: 100vh;
+.container{
+    // height: 100vh;
     background-color: tomato;
     display: flex;
     justify-content: center;
     align-items: center;
+    .content{
+        height: 100vh;
+        overflow-y: auto;
+    }
 }

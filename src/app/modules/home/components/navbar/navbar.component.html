@@ -1,3 +1,29 @@
-<div class="navbar">
-    <button (click)="showSideBar()">show sidebar</button>
+<div class="container">
+    <div class="navbar">
+        <div class="options">
+            <div class="icon-menu">
+                <img 
+                    src="/assets/image/open-sidebar.png" 
+                    alt="open sidebar"
+                    (click)="showSideBar()"
+                >
+            </div>
+            <div class="option-select">Movies</div>
+            <div class="sugerencias">Series</div>
+        </div>
+        <div class="logo-app">
+            <img src="/assets/image/logo-HBOMax-clone.png" alt="logo HBO Max">
+        </div>
+        <div class="actions">
+            <div class="search">
+                <img src="/assets/image/search.png" alt="search">
+            </div>
+            <div class="user-profile">
+                <div class="user-image" routerLink="/profile/select">
+                    G
+                </div>
+                <div class="user-name" routerLink="/profile/select">Gerson Benito</div>
+            </div>
+        </div>
+    </div>
 </div>
