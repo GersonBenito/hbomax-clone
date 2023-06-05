@@ -10,16 +10,17 @@
         color: rgb(255, 255, 255);
     }
 }
-.container{
-    background: rgba(15, 15, 15, 0.98);
+.container-navbar{
+    // background: rgba(15, 15, 15, 0.98);
     position: fixed;
     width: 100%;
     opacity: 0.98;
     height: 80px;
-    z-index: 0;
+    z-index: 5;
     display: flex;
     align-items: center;
     top: 0;
+    background: rgba(35, 35, 35, 0.7);
 }
 .navbar{
     display: flex;

@@ -1,9 +1,5 @@
-.container{
-    // height: 100vh;
-    background-color: tomato;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-home{
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     .content{
         height: 100vh;
         overflow-y: auto;

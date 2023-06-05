@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SecctionsPageComponent } from './page/secctions-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('@modules/sections/sections.module').then( m => m.SectionsModule )
+    component: SecctionsPageComponent
   }
 ];
 
@@ -12,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class SectionsRoutingModule { }

@@ -1,0 +1,19 @@
+<div class="slider">
+    <img [src]="movie.backdrop_path" [alt]="movie.title">
+    <div class="previus">
+        <button [disabled]="disbled" (click)="previusMovie()">
+            <img src="/assets/svg/previus.svg" alt="previus">
+        </button>
+    </div>
+    <div class="next">
+        <button (click)="nextMovie()">
+            <img src="/assets/svg/next.svg" alt="next">
+        </button>
+    </div>
+    <div class="counter">
+        <div 
+            [class]="['circle', (movie.id === movieLength.id) && 'active' ]" 
+            *ngFor="let movieLength of movies">
+        </div>
+    </div>
+</div>

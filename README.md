@@ -10,3 +10,9 @@ Run `npm i` for a install depencies
 
 ![profiles](./src/assets/readme/select-profile.png)
 ![home](./src/assets/readme/home.png)
+![home2](./src/assets/readme/home2.png)
+![sidebar](./src/assets/readme/sidebar.png)
+![subsidebar](./src/assets/readme/subsidebar.png)
+
+# API TMDB
+Get your Token and API key here 👉[TMDB](https://developer.themoviedb.org/) 
