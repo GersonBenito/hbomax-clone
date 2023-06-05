@@ -44,5 +44,4 @@ export class SidebarComponent implements OnInit{
     this.subMenu = false;
     // navegar a una pantalla diferente
   }
-
 }

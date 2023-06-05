@@ -29,6 +29,12 @@
     *ngIf="subMenu"
 >
     <div class="submenu">
-        <div class="option" *ngFor="let genero of generos">{{genero.title | titlecase}}</div>
+        <div 
+            class="option" 
+            *ngFor="let genero of generos" 
+            (click)="navigatePage(genero.title)"
+        >
+            {{genero.title | titlecase}}
+        </div>
     </div>
 </div>
