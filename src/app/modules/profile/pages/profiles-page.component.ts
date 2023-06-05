@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profiles-page',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ProfilesPageComponent {
 
+  constructor(private title: Title){
+    this.title.setTitle('Who is waching? - HBO Max');
+  }
 }

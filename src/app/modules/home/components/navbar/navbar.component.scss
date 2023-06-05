@@ -1,10 +1,14 @@
 @mixin text-navbar($sise: 14px){
-    color: rgb(255, 255, 255);
+    color: #999999;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: $sise;
     line-height: 21px;
     letter-spacing: 0px;
+    transition: color 0.2s;
+    &:hover{
+        color: rgb(255, 255, 255);
+    }
 }
 .container{
     background: rgba(15, 15, 15, 0.98);
@@ -24,7 +28,7 @@
     width: 100%;
     margin: 0px 24px;
     .options{
-        @include text-navbar();
+        // @include text-navbar();
         display: flex;
         gap: 24px;
         align-items: center;
@@ -35,6 +39,9 @@
                 width: 24px;
                 cursor: pointer;
             }
+        }
+        .text{
+            @include text-navbar()
         }
     }
     .logo-app{
@@ -72,6 +79,10 @@
             justify-content: center;
             @include text-navbar(16px);
             cursor: pointer;
+            transition: transform 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
         .user-name{
             @include text-navbar();

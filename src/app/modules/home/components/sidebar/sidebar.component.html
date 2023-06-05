@@ -1,10 +1,34 @@
-<div 
-    *ngIf="visible"
+<div class="container-sidebar" *ngIf="visible">
+    <div 
     [ngClass]="[
         'sidebar', 
         'animate__animated', 
         visible ? 'animate__fadeInLeft' : 'animate__fadeInRight', 
         'animate__faster']"
 >
-    <button (click)="closeSideBar()">close sidebar</button>
+    <div class="icon-close">
+        <img src="/assets/image/close-sidebar.png" (click)="closeSideBar()" alt="close sidebar">
+    </div>
+    <div class="container-options">
+        <div 
+            [class]="['option', option.title === 'Géneros' && 'generos']" 
+            *ngFor="let option of menu"
+            (click)=" option.title === 'Géneros' ? showSubMenu() : navigatePage(option.title)"
+        >
+            {{ option.title | titlecase }}
+            <div class="icon" *ngIf="option.title === 'Géneros'">
+                <img src="/assets/svg/next.svg" alt="next">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div 
+    class="submenu-sidebar animate__animated animate__fadeInLeft animate__faster" 
+    *ngIf="subMenu"
+>
+    <div class="submenu">
+        <div class="option" *ngFor="let genero of generos">{{genero.title | titlecase}}</div>
+    </div>
 </div>

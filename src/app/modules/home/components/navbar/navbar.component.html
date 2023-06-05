@@ -8,8 +8,8 @@
                     (click)="showSideBar()"
                 >
             </div>
-            <div class="option-select">Movies</div>
-            <div class="sugerencias">Series</div>
+            <div class="text">Movies</div>
+            <div class="text">Series</div>
         </div>
         <div class="logo-app">
             <img src="/assets/image/logo-HBOMax-clone.png" alt="logo HBO Max">
@@ -19,10 +19,8 @@
                 <img src="/assets/image/search.png" alt="search">
             </div>
             <div class="user-profile">
-                <div class="user-image" routerLink="/profile/select">
-                    G
-                </div>
-                <div class="user-name" routerLink="/profile/select">Gerson Benito</div>
+                <div class="user-image" routerLink="/profile/select">{{ profile.username | firstLetter }}</div>
+                <div class="user-name" routerLink="/profile/select">{{ profile.username }}</div>
             </div>
         </div>
     </div>

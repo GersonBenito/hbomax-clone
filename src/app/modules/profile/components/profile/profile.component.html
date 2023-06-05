@@ -1,8 +1,10 @@
 <div class="container-profiles">
-    <div class="profile" *ngFor="let user of users">
-        <div class="user-picture">
-            <div class="user">{{ user.username | firstLetter }}</div>
+    <div *ngFor="let profile of profiles">
+        <div class="profile" (click)="selectProfile(profile)">
+            <div class="user-picture">
+                <div class="user">{{ profile.username | firstLetter }}</div>
+            </div>
+            <div class="user-name">{{ profile.username }}</div>
         </div>
-        <div class="user-name">{{ user.username }}</div>
     </div>
 </div>

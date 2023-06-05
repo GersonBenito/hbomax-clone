@@ -1,4 +1,19 @@
-.sidebar{
+@mixin option-menu(){
+    color: #999999;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    transition: color 0.2s;
+    margin: 16px 0px;
+    cursor: pointer;
+    &:hover{
+        color: rgb(255, 255, 255);
+    }
+}
+
+.container-sidebar{
     color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
     background-color: rgb(15, 15, 15);
@@ -9,4 +24,51 @@
     transform: translateX(0px);
     transition: transform 1s;
     z-index: 1;
+}
+.sidebar{
+    padding: 0px 24px;
+    .icon-close{
+        margin: 22px 0px;
+        display: flex;
+        img{
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+    }
+    .container-options{
+        .option{
+            @include option-menu();
+        }
+        .generos{
+            border-top: 2px solid #999999;
+            border-bottom: 2px solid #999999;
+            padding: 16px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            .icon{
+                display: flex;
+            }
+        }
+    }
+}
+
+.submenu-sidebar{
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 10px;
+    background-color: rgb(25, 25, 25);
+    height: 100%;
+    width: 290px;
+    position: absolute;
+    opacity: 1;
+    left: 290px;
+    z-index: 1;
+    .submenu{
+        padding: 45px 24px 0px 24px;
+        .option{
+            @include option-menu();
+        }
+    }
 }

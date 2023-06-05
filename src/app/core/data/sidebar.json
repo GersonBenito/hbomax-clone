@@ -1,0 +1,69 @@
+{
+    "menu": [
+        {
+            "title": "inicio"
+        },
+        {
+            "title": "series"
+        },
+        {
+            "title": "películas"
+        },
+        {
+            "title": "originales"
+        },
+        {
+            "title": "recién añadidos"
+        },
+        {
+            "title": "últimos días"
+        },
+        {
+            "title": "próximante"
+        },
+        {
+            "title": "en tendencia"
+        },
+        {
+            "title": "Géneros"
+        }
+    ],
+    "generos": [
+        {
+            "title": "acción"
+        },
+        {
+            "title": "animación"
+        },
+        {
+            "title": "comedia"
+        },
+        {
+            "title": "crimen"
+        },
+        {
+            "title": "documentales"
+        },
+        {
+            "title": "drama"
+        },
+        {
+            "title": "fantasía y ciencia ficción"
+        },
+        {
+            "title": "terror y suspenso"
+        },
+        {
+            "title": "internacional"
+        },
+        {
+            "title": "infantil y familiar"
+        },
+        {
+            "title": "producciones locales"
+        },
+        {
+            "title": "romance"
+        }
+    ] 
+}
