@@ -1,0 +1,60 @@
+@mixin hover-section(){
+    background: #0b0b0b8f;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 450px;
+    width: 32px;
+    justify-content: center;
+    visibility: hidden;
+    z-index: -5;
+    cursor: pointer;
+}
+
+.container{
+    // z-index: 10;
+    // position: relative;
+    // .cards{
+    //     display: grid;
+    //     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // }
+    .title-section{
+        color: #999999;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 21px;
+        letter-spacing: 0px;
+        transition: color 0.2s;
+        margin: 32px 32px 16px 32px;
+        &:hover{
+            color: rgb(255, 255, 255);
+        }
+    }
+    .cards{
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        &:hover{
+            .next{
+                visibility: visible;
+                z-index: 20;
+            }
+            .previus{
+                visibility: visible;
+                z-index: 20;
+            }
+        }
+        .previus{
+            left: 0rem;
+            @include hover-section();
+        }
+        .next{
+            right: 0rem;
+            @include hover-section();
+        }
+    }
+    .cards::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,4 +1,4 @@
-<div class="container-navbar">
+<div class="container-navbar" [style.background]="background">
     <div class="navbar">
         <div class="options">
             <div class="icon-menu">
@@ -8,8 +8,8 @@
                     (click)="showSideBar()"
                 >
             </div>
-            <div class="text">Movies</div>
-            <div class="text">Series</div>
+            <div class="text" [style.color]="color">Movies</div>
+            <div class="text" [style.color]="color">Series</div>
         </div>
         <div class="logo-app">
             <img src="/assets/image/logo-HBOMax-clone.png" alt="logo HBO Max">
@@ -19,8 +19,20 @@
                 <img src="/assets/image/search.png" alt="search">
             </div>
             <div class="user-profile">
-                <div class="user-image" routerLink="/profile/select">{{ profile.username | firstLetter }}</div>
-                <div class="user-name" routerLink="/profile/select">{{ profile.username }}</div>
+                <div 
+                    class="user-image"
+                    routerLink="/profile/select"
+                    [style.color]="color"
+                >
+                    {{ profile.username | firstLetter }}
+                </div>
+                <div 
+                    class="user-name" 
+                    routerLink="/profile/select"
+                    [style.color]="color"
+                >
+                    {{ profile.username }}
+                </div>
             </div>
         </div>
     </div>

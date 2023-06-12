@@ -1,0 +1,32 @@
+.card{
+    width: 300px;
+    height: 450px;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+        border: 3px solid #271b99;
+        .show{
+            visibility: visible;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    .show{
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        border-radius: 999px;
+        height: 42px;
+        width: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        img{
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

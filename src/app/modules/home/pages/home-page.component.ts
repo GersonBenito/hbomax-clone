@@ -9,6 +9,8 @@ import { Title } from '@angular/platform-browser';
 export class HomePageComponent {
 
   public isVisibleSidebar: boolean = false;
+  public background: string = 'transparent';
+  public color: string = 'rgb(255, 255, 255)';
 
   constructor(private title: Title){
     this.title.setTitle('HBO Max - Clone')
@@ -22,4 +24,14 @@ export class HomePageComponent {
     this.isVisibleSidebar = visible;
   }
 
+  scrollTo(event: any){
+    const scrollTo = event.target;
+    if(scrollTo.scrollTop >= 245){
+      this.background = 'rgba(15, 15, 15, 0.98)';
+      this.color = '#999999';
+    }else{
+      this.background = 'transparent';
+      this.color = 'rgb(255, 255, 255)';
+    }
+  }
 }

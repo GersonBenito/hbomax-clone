@@ -2,9 +2,9 @@
     (onShowSideBar)="closeSideBar($event)" 
     [visible]="isVisibleSidebar" 
 />
-<app-navbar (onShowSideBar)="showSideBar($event)" />
+<app-navbar (onShowSideBar)="showSideBar($event)" [background]="background" [color]="color" />
 <div class="container-home">
-    <div class="content">
+    <div class="content" (scroll)="scrollTo($event)">
         <router-outlet />
         <app-footer />
     </div>
