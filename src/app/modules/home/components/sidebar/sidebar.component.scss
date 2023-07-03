@@ -23,7 +23,7 @@
     width: 290px;
     transform: translateX(0px);
     transition: transform 1s;
-    z-index: 10;
+    z-index: 30;
 }
 .sidebar{
     padding: 0px 24px;
@@ -64,7 +64,7 @@
     position: absolute;
     opacity: 1;
     left: 290px;
-    z-index: 10;
+    z-index: 30;
     .submenu{
         padding: 47px 24px 0px 24px;
         .option{

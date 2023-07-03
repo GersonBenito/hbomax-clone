@@ -3,6 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { environment as env } from 'src/environments/environment.development';
 import { Observable } from 'rxjs';
 import { Movie } from '@core/models/movies.interface';
+// import { Categories } from '@core/enums/categories';
 
 
 @Injectable({
@@ -21,8 +22,8 @@ export class SectionService {
 
   constructor() { }
 
-  getSection(section: string, page: number): Observable<Movie>{
-    return this.http.get<Movie>(`${this.URL}/movie/${section}?page=${page}`, {
+  getSection(section: string, page: number, type: string): Observable<Movie>{
+    return this.http.get<Movie>(`${this.URL}/${type}/${section}?page=${page}`, {
       params: this.params,
       headers: this.headers
     });

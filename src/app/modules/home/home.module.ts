@@ -7,7 +7,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SharedModule } from '@shared/shared.module';
-import { SecctionsComponent } from './components/secctions/secctions.component';
 
 
 @NgModule({
@@ -16,7 +15,6 @@ import { SecctionsComponent } from './components/secctions/secctions.component';
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
-    SecctionsComponent
   ],
   imports: [
     CommonModule,

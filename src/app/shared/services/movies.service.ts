@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment as env } from 'src/environments/environment.development';
 import { Observable } from 'rxjs';
 import { Movie } from '@core/models/movies.interface';
+import { Categories } from '@core/enums/categories';
 
 
 @Injectable({
@@ -21,8 +22,14 @@ export class MoviesService {
   })
   private readonly URL: string = env.urlBase;
 
-  getMoviesPopular(): Observable<Movie>{
-    return this.http.get<Movie>(`${this.URL}/trending/movie/day?`, { 
+  getMoviesPopular(categorie: string, section:string, day: string): Observable<Movie>{
+
+    // TODO: Revisar
+    const endPoint = (categorie === Categories.movie) 
+                    ? `${this.URL}/${section}/${categorie}${day}?` 
+                    : `${this.URL}/${categorie}/${section}${day}?`
+
+    return this.http.get<Movie>(endPoint, { 
       params: this.params, 
       headers: this.headers 
     });
