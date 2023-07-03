@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MediaType, OriginalLanguage, Result } from '@core/models/movies.interface';
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { Result } from '@core/models/movies.interface';
 import { MoviesService } from '@shared/services/movies.service';
 import { environment as env } from 'src/environments/environment.development';
 
@@ -10,6 +10,10 @@ import { environment as env } from 'src/environments/environment.development';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit{
+
+  @Input() public categorie: string = '';
+  @Input() public section: string = '';
+  @Input() public type: string = '';
 
   public movies: Result[] = [];
   public movie: Result = {
@@ -30,21 +34,21 @@ export class SliderComponent implements OnInit{
   public next: number = 0;
   public disbled: boolean = true;
 
-  constructor(private _movieService: MoviesService){
-    this.getMoviesPupulars();
-  }
+  private _movieService = inject(MoviesService);
+
 
   ngOnInit(): void {
       // mostrar una pelicula cada cierto tiempo
+      this.getMoviesPupulars();
       setInterval(()=>{
         this.nextMovie();
       }, 3500);
   }
 
   getMoviesPupulars(){
-    this._movieService.getMoviesPopular().subscribe({
+    this._movieService.getMoviesPopular(this.categorie,this.section, this.type).subscribe({
       next: response => {
-        this.movies = response.results;
+        this.movies = response.results.slice(0, 5);
         this.next = this.movies.length;
         this.getOnlyMovie(this.next);
       },
