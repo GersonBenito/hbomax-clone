@@ -19,12 +19,13 @@ export class ProfileService {
     this._cookieService.set('profile', JSON.stringify(profile), env.expiredSession, '/');
   }
 
-  getProfile(): User {
-    const profile = this._cookieService.get('profile');
-    if(!profile){
-      this._router.navigate(['profile','select']);
-    }
-    return JSON.parse(profile);
-  }
+  // getProfile(): User | null {
+  //   const profile = this._cookieService.get('profile');
+  //   if(profile){
+  //     return JSON.parse(profile);
+  //   }else{
+  //     return null;
+  //   }
+  // }
 
 }

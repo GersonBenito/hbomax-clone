@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter, inject, OnInit, Input } from '@angular/core';
 import { User } from '@core/models/user.interface';
 import { ProfileService } from '@modules/profile/services/profile.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ import { ProfileService } from '@modules/profile/services/profile.service';
 })
 export class NavbarComponent implements OnInit{
 
-  private _profileService = inject(ProfileService);
+  private _cookieService = inject(CookieService);
   @Output() onShowSideBar: EventEmitter<boolean> = new EventEmitter(); 
   @Input() background: string = '';
   @Input() color: string = '';
@@ -29,7 +30,7 @@ export class NavbarComponent implements OnInit{
   }
 
   getUserPrfile(): void {
-    this.profile = this._profileService.getProfile();
+    this.profile = JSON.parse(this._cookieService.get('profile'));
   }
 
 }
