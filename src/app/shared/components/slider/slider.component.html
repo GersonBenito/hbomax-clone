@@ -1,5 +1,5 @@
 <div class="slider">
-    <img [src]="movie.backdrop_path" [alt]="movie.title">
+    <img class="slider-image" [src]="movie.backdrop_path" [alt]="movie.title">
     <div class="previus">
         <button [disabled]="disbled" (click)="previusMovie()">
             <img src="/assets/svg/previus.svg" alt="previus">
